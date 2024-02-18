@@ -12,7 +12,7 @@ export const Home = () =>  {
     }
 
     useEffect(()=> {
-        console.log(inputValue)
+
     }, [inputValue])
 
     return (

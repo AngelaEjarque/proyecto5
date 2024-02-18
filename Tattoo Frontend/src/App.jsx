@@ -1,4 +1,9 @@
-import { Home } from "./pages/Home/home";
+import { Footer } from "./components/Footer/Footer";
+import { Head } from "./components/Head/Head";
+
+
+import { Body } from "./pages/Body/Body";
+import { Home } from "./pages/Home/Home";
 
 
 function App() {
@@ -6,7 +11,10 @@ function App() {
 
   return (
     <>
+      <Head/>
       <Home/>
+      <Body/>
+      <Footer/>
     </>
   )
 }
