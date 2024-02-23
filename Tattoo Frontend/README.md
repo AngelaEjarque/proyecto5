@@ -1,77 +1,30 @@
-# Proyecto5
-Tattoo Frontend
-#Indice
+# React + TypeScript + Vite
 
-<details>
-  <summary>Contenido 📝</summary>
-  <ol>
-    <li><a href="#objetivo">Objetivo</a></li>
-    <li><a href="#sobre-el-proyecto">Sobre el proyecto</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#diagrama-bd">Diagrama</a></li>
-    <li><a href="#instalación-en-local">Instalación</a></li>
-    <li><a href="#endpoints">Endpoints</a></li>
-    <li><a href="#futuras-funcionalidades">Futuras funcionalidades</a></li>
-    <li><a href="#contribuciones">Contribuciones</a></li>
-    <li><a href="#desarrollo">Desarrollo</a></li>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-  </ol>
-</details>
+Currently, two official plugins are available:
 
-## Objetivo
-En este proyecto, realizamos una parte frontal que conecte con
-nuestra API encargada de gestionar el modelo de negocio de un estudio de tatuajes 
-Tendremos que ser capaces de crear una parte frontal de la app
-lo suficientemente versátil como para que clientes, profesionales y un administrador
-puedan acceder a ella y contemplen la información que proceda en cada caso.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Sobre el proyecto
-.
+## Expanding the ESLint configuration
 
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Stack
-Tecnologías utilizadas: 
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![NodeJS](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)](https://developer.mozilla.org/en-US/docs/Web/API/Node) [![ExpressJS](https://img.shields.io/badge/Express-000?logo=express&logoColor=fff&style=flat)](https://expressjs.com/)  [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat)](https://developer.mozilla.org/en-US/docs/Glossary/Git)
+- Configure the top-level `parserOptions` property like this:
 
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-
-
-## Endpoints
-
-
-- LOGIN <details>
-
-        POST http://localhost:3000/auth/login
-    body:
-         "email": "test3@test.com",
-         "password_hash": "1234"
-
-
-
- 
-                    
-## Contribuciones
-Las sugerencias y aportaciones son siempre bienvenidas.  
-
-Puedes hacerlo de dos maneras:
-
-1. Abriendo una issue
-2. Crea un fork del repositorio
-    - Crea una nueva rama  
-        ```
-        $ git checkout -b feature/nombreUsuario-mejora
-        ```
-    - Haz un commit con tus cambios 
-        ```
-        $ git commit -m 'feat: mejora X cosa'
-        ```
-    - Haz push a la rama 
-        ```
-        $ git push origin feature/nombreUsuario-mejora
-        ```
-    - Abre una solicitud de Pull Request
-
-
-
-
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
