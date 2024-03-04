@@ -10,7 +10,8 @@ function Home() {
             <HeaderHome/>
             <BodyHome/>
             
-            <Link to={"/test"}> return to test</Link>
+            <div><Link to={"/login"}> Login here</Link></div>
+            <Link to={"/register"}> Register here</Link>
         </div>
     )
 }
